@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "pg": "^8.9.0",
+    "reflect-metadata": "^0.1.13",
+    "tsc": "^2.0.4",
+    "typeorm": "0.3.11",
+    "typescript": "^4.9.5",
+    "zod": "^3.20.6"
+  },
+  "name": "m4-demo-s5",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:renangiaretta/M4-DEMO-S5.git",
+  "author": "renangiaretta <renan.giaretta@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsnd --rs --cls --ignore-watch node_modules src/server.ts",
+    "typeorm": "typeorm-ts-node-commonjs"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.14.1",
+    "@types/pg": "^8.6.6",
+    "ts-node-dev": "^2.0.0"
+  }
+}
