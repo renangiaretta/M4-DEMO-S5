@@ -1,5 +1,4 @@
-import { NextFunction } from "connect"
-import { Request, Response } from "express-serve-static-core"
+import { Request, Response, NextFunction } from "express-serve-static-core"
 import { ZodError } from "zod"
 
 class AppError extends Error {

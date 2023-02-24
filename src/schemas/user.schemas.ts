@@ -9,15 +9,15 @@ const userSchema = z.object({
     password: z.string().min(4).max(20).transform((pass) => {
         return hashSync(pass,10)
     }),
-    birthDate: z.date().optional()
+    birthDate: z.date().optional().nullable()
 })
 
-const returnUser = userSchema.extend({
+const returnUserSchema = userSchema.extend({
     id: z.number(),
     createdAt: z.date(),
     updatedAt: z.date(),
-    deletedAt: z.date()
+    deletedAt: z.date().nullable()
 }).omit({password: true})
 
 
-export { userSchema, returnUser }
+export { userSchema, returnUserSchema }

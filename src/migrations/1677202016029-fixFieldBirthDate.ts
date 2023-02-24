@@ -10,5 +10,4 @@ export class fixFieldBirthDate1677202016029 implements MigrationInterface {
     public async down(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.query(`DROP TABLE "users"`);
     }
-
 }
