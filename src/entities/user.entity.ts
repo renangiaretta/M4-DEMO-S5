@@ -1,7 +1,7 @@
 import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, DeleteDateColumn } from "typeorm";
 
 
-@Entity( 'users' )
+@Entity('users')
 class User {
 
     @PrimaryGeneratedColumn('increment')

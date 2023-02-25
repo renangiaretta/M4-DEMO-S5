@@ -11,11 +11,11 @@ const createUserService = async ( userData: TUser ): Promise<TUserReturn> => {
     const userRepository: Repository<User> = AppDataSource.getRepository(User)
 
     //cria objeto de usuario
-    const user = userRepository.create(userData) 
+    const user: User = userRepository.create(userData) 
     // cria uma query INSERT INTO e coloca no DB
     await userRepository.save(user)
 
-    const newUser = returnUserSchema.parse(user)
+    const newUser: TUserReturn = returnUserSchema.parse(user)
 
     return newUser
 }
