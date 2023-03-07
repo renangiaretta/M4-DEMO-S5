@@ -16,7 +16,6 @@ const createUserService = async ( userData: TUser ): Promise<TUserReturn> => {
     await userRepository.save(user)
 
     const newUser: TUserReturn = returnUserSchema.parse(user)
-
     return newUser
 }
 

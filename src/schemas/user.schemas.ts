@@ -6,9 +6,7 @@ import { hashSync } from 'bcryptjs'
 const userSchema = z.object({
     name: z.string().min(3).max(45),
     email: z.string().min(10).max(45),
-    password: z.string().min(4).max(20).transform((pass) => {
-        return hashSync(pass,10)
-    }),
+    password: z.string().min(4).max(20),
     birthDate: z.preprocess((date) => {
         if (typeof date == 'string' || date instanceof Date){
             return new Date(date)
